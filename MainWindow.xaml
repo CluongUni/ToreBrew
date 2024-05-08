@@ -6,9 +6,9 @@
         xmlns:local="clr-namespace:ToreBrew"
         mc:Ignorable="d"
         Title="ToreBrew" Height="800" Width="1000" >
-    <Grid x:Name="windowsMain">
+    <Grid x:Name="windowsMain" IsEnabled="True">
         <Label Content="ToreBrew" HorizontalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,15,0,0" VerticalAlignment="Top" Height="35" Width="200" FontSize="22"/>
-        <Button Content="Process" HorizontalAlignment="Left" Margin="70,689,0,0" VerticalAlignment="Top" Height="27" Width="147" Name="btnProcess" Click="btnProcess_Click">
+        <Button Content="Process" HorizontalAlignment="Left" Margin="70,648,0,0" VerticalAlignment="Top" Height="27" Width="147" Name="btnProcess" Click="btnProcess_Click">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
@@ -28,7 +28,7 @@
 
         </ComboBox>
         <Label Content="Regular Type of Coffee" HorizontalAlignment="Left" Margin="71,559,0,0" VerticalAlignment="Top" Width="143" FontWeight="Bold"/>
-        <ComboBox HorizontalAlignment="Left" Margin="522,586,0,0" VerticalAlignment="Top" Width="144" Height="30" Name="cbZodiac">
+        <ComboBox HorizontalAlignment="Left" Margin="522,586,0,0" VerticalAlignment="Top" Width="144" Height="30" Name="cbZodiac" SelectionChanged="cbZodiac_SelectionChanged">
             <ComboBox.Effect>
                 <DropShadowEffect/>
             </ComboBox.Effect>
@@ -45,7 +45,26 @@
         <Label Content="Zodiac" HorizontalAlignment="Left" Margin="522,561,0,0" VerticalAlignment="Top" Width="143" FontWeight="Bold"/>
         <Image Name="imgCoffee"  HorizontalAlignment="Left" Height="155" Margin="241,586,0,0" VerticalAlignment="Top" Width="239"/>
         <Image Name="imgZodiac" HorizontalAlignment="Left" Height="159" Margin="722,587,0,0" VerticalAlignment="Top" Width="237"/>
-        <Label Content="Weather" HorizontalAlignment="Left" Margin="20,86,0,0" VerticalAlignment="Top" Height="378" Width="343" Name="lblWeather"/>
-        <Label Content="Recipe" HorizontalAlignment="Left" Margin="402,84,0,0" VerticalAlignment="Top" Height="379" Width="540" Name="lblRecipe"/>
+        <Label Content="Weather" HorizontalAlignment="Left" Margin="20,86,0,0" VerticalAlignment="Top" Height="297" Width="300" Name="lblWeather"/>
+        <Label Content="Recipe" HorizontalAlignment="Left" Margin="402,84,0,0" VerticalAlignment="Top" Height="297" Width="555" Name="lblRecipe"/>
+        <TextBox Name="txtName" HorizontalAlignment="Left" Margin="70,507,0,0" TextWrapping="Wrap" Text="Customer's Name" VerticalAlignment="Top" Width="159" Height="35"/>
+        <Label Content="Customer's Name" HorizontalAlignment="Left" Margin="71,476,0,0" VerticalAlignment="Top" Width="153" FontWeight="Bold"/>
+        <Button Content="Feedback" HorizontalAlignment="Left" Margin="70,745,0,0" VerticalAlignment="Top" Height="27" Width="147" x:Name="btnFeedback" Click="btnFeedback_Click" >
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <TextBox x:Name="txtInvoiceId" HorizontalAlignment="Left" Margin="322,509,0,0" TextWrapping="Wrap" Text="InvoiceId" VerticalAlignment="Top" Width="159" Height="35"/>
+        <Label Content="Invoice No" HorizontalAlignment="Left" Margin="323,480,0,0" VerticalAlignment="Top" Width="153" FontWeight="Bold"/>
+        <Label Content="Rating" HorizontalAlignment="Left" Margin="504,480,0,0" VerticalAlignment="Top" Width="153" FontWeight="Bold"/>
+        <Button Content="Brew" HorizontalAlignment="Left" Margin="70,696,0,0" VerticalAlignment="Top" Height="27" Width="147" x:Name="btnBrew" Click="btnBrew_Click" >
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <CheckBox Content="Prefer" HorizontalAlignment="Left" Margin="402,428,0,0" VerticalAlignment="Top" Height="34" Width="78" FontWeight="Bold"/>
+        <CheckBox Content="*" HorizontalAlignment="Left" Margin="504,509,0,0" VerticalAlignment="Top" Height="27" Width="85" FontWeight="Bold" FontSize="20"/>
+        <CheckBox Content="**" HorizontalAlignment="Left" Margin="587,509,0,0" VerticalAlignment="Top" Height="27" Width="85" FontSize="20" FontWeight="Bold"/>
+        <CheckBox Content="**" HorizontalAlignment="Left" Margin="662,509,0,0" VerticalAlignment="Top" Height="27" Width="85" FontSize="20" FontWeight="Bold"/>
     </Grid>
 </Window>

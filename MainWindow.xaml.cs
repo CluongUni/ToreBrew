@@ -19,6 +19,8 @@ namespace ToreBrew
         public MainWindow()
         {
             InitializeComponent();
+            txtName.Text = string.Empty;
+            lblWeather.Content = string.Empty;
         }
 
         private void btnProcess_Click(object sender, RoutedEventArgs e)
@@ -33,6 +35,23 @@ namespace ToreBrew
             var path = System.IO.Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, $"assets\\coffee\\{selectedCoffee}.jfif");
             imgCoffee.Source = new BitmapImage(new Uri(path));
             
+        }
+
+        private void cbZodiac_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var selectedCoffee = (cbZodiac.SelectedItem as ComboBoxItem)?.Content.ToString();
+            var path = System.IO.Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, $"assets\\zodiac\\{selectedCoffee}.jfif");
+            imgZodiac.Source = new BitmapImage(new Uri(path));
+        }
+
+        private void btnFeedback_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnBrew_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
