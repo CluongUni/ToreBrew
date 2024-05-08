@@ -23,7 +23,16 @@ namespace ToreBrew
 
         private void btnProcess_Click(object sender, RoutedEventArgs e)
         {
+            var selectedCoffee = (cbCoffee.SelectedItem as ComboBoxItem)?.Content.ToString();
+            MessageBox.Show($"{selectedCoffee}");
+        }
 
+        private void cbCoffee_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var selectedCoffee = (cbCoffee.SelectedItem as ComboBoxItem)?.Content.ToString();
+            var path = System.IO.Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, $"assets\\coffee\\{selectedCoffee}.jfif");
+            imgCoffee.Source = new BitmapImage(new Uri(path));
+            
         }
     }
 }

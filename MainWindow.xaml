@@ -5,35 +5,47 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ToreBrew"
         mc:Ignorable="d"
-        Title="ToreBrew" Height="800" Width="1000">
-    <Grid>
+        Title="ToreBrew" Height="800" Width="1000" >
+    <Grid x:Name="windowsMain">
         <Label Content="ToreBrew" HorizontalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,15,0,0" VerticalAlignment="Top" Height="35" Width="200" FontSize="22"/>
-        <Button Content="Process" HorizontalAlignment="Left" Margin="70,689,0,0" VerticalAlignment="Top" Height="27" Width="147" Name="btnProcess" Click="btnProcess_Click"/>
-        <ComboBox HorizontalAlignment="Left" Margin="70,586,0,0" VerticalAlignment="Top" Width="144" Height="30">
+        <Button Content="Process" HorizontalAlignment="Left" Margin="70,689,0,0" VerticalAlignment="Top" Height="27" Width="147" Name="btnProcess" Click="btnProcess_Click">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <ComboBox HorizontalAlignment="Left" Margin="70,586,0,0" VerticalAlignment="Top" Width="144" Height="30" Name="cbCoffee" SelectionChanged="cbCoffee_SelectionChanged">
+            <ComboBox.Effect>
+                <DropShadowEffect/>
+            </ComboBox.Effect>
             <ComboBoxItem Content="Black"/>
             <ComboBoxItem Content="Latte"/>
             <ComboBoxItem Content="Cappuccino"/>
             <ComboBoxItem Content="Americano"/>
             <ComboBoxItem Content="Espresso"/>
-            <ComboBoxItem Content="Doppio"/>
+            <ComboBoxItem Content="Mocha"/>
             <ComboBoxItem Content="Cortado"/>
-            <ComboBoxItem Content="Red Eye"/>
-            <ComboBoxItem Content="9"/>
-            <ComboBoxItem Content="10"/>
+            <ComboBoxItem Content="Irish"/>
+
         </ComboBox>
         <Label Content="Regular Type of Coffee" HorizontalAlignment="Left" Margin="71,559,0,0" VerticalAlignment="Top" Width="143" FontWeight="Bold"/>
-        <ComboBox HorizontalAlignment="Left" Margin="522,586,0,0" VerticalAlignment="Top" Width="144" Height="30">
-            <ComboBoxItem Content="Black"/>
-            <ComboBoxItem Content="Latte"/>
-            <ComboBoxItem Content="Cappuccino"/>
-            <ComboBoxItem Content="Americano"/>
-            <ComboBoxItem Content="Espresso"/>
-            <ComboBoxItem Content="Doppio"/>
-            <ComboBoxItem Content="Cortado"/>
-            <ComboBoxItem Content="Red Eye"/>
-            <ComboBoxItem Content="9"/>
-            <ComboBoxItem Content="10"/>
+        <ComboBox HorizontalAlignment="Left" Margin="522,586,0,0" VerticalAlignment="Top" Width="144" Height="30" Name="cbZodiac">
+            <ComboBox.Effect>
+                <DropShadowEffect/>
+            </ComboBox.Effect>
+            <ComboBoxItem Content="Aries"/>
+            <ComboBoxItem Content="Taurus"/>
+            <ComboBoxItem Content="Gemini"/>
+            <ComboBoxItem Content="Cancer"/>
+            <ComboBoxItem Content="Leo"/>
+            <ComboBoxItem Content="Virgo"/>
+            <ComboBoxItem Content="Libra"/>
+            <ComboBoxItem Content="Scorpio"/>
+
         </ComboBox>
         <Label Content="Zodiac" HorizontalAlignment="Left" Margin="522,561,0,0" VerticalAlignment="Top" Width="143" FontWeight="Bold"/>
+        <Image Name="imgCoffee"  HorizontalAlignment="Left" Height="155" Margin="241,586,0,0" VerticalAlignment="Top" Width="239"/>
+        <Image Name="imgZodiac" HorizontalAlignment="Left" Height="159" Margin="722,587,0,0" VerticalAlignment="Top" Width="237"/>
+        <Label Content="Weather" HorizontalAlignment="Left" Margin="20,86,0,0" VerticalAlignment="Top" Height="378" Width="343" Name="lblWeather"/>
+        <Label Content="Recipe" HorizontalAlignment="Left" Margin="402,84,0,0" VerticalAlignment="Top" Height="379" Width="540" Name="lblRecipe"/>
     </Grid>
 </Window>
