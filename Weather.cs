@@ -8,10 +8,20 @@ namespace ToreBrew
 {
     public class Weather
     {
-        public Weather()
+        public Weather(string location)
         {
-            //Forecasts = new List<WeatherForecast>();
+            Location = location;
         }
+
+        public string Location { get; set; }
+
+        public string GetWeather()
+        {
+            var weatherDetail = $"{Location} , {DateTime.Now} \n" +
+                   $"Precipitation: 5 % \nHumidity: 82 % \nWind: 8 km / h";
+            return weatherDetail;
+        }
+
     }
 
     public class WeatherForecast
